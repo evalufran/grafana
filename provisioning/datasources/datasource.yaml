@@ -1,0 +1,16 @@
+# config file version
+apiVersion: 1
+
+datasources:
+- name: Elasticsearchyeee
+  type: elasticsearch
+  access: proxy
+  orgId: 1
+  url: http://192.168.66.160:9200
+  database: logstash-2015.05.20
+  jsonData:
+    timeField: "@timestamp" 
+    esVersion: 60
+    logMessageField: _source
+  version: 1
+  editable: true
